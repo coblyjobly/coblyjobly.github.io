@@ -73,6 +73,7 @@ p {
 
 .project-video {
     max-width: 400px; /* Adjusted video size */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .btn {
