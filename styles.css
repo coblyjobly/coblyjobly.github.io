@@ -20,6 +20,12 @@ header {
 
 header h1 {
     text-align: center;
+    font-size: x-large;
+}
+
+header h2 {
+    text-align: center;
+    font-size: large;
 }
 
 nav {
