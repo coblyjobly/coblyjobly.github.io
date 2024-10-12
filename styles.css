@@ -64,8 +64,8 @@ h2 {
 }
 
 .project-video {
-    max-width: 250px; /* Adjust video width */
-    max-height: 150px; /* Adjust video height */
+    max-width: 300px; /* Adjust video width to make it larger */
+    max-height: 200px; /* Adjust video height */
 }
 
 .btn {
