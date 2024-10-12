@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Colby Jacobs - Portfolio</title>
+    <title>Colby Jacobs' Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,49 +11,83 @@
         <div class="container">
             <h1>Colby Jacobs</h1>
             <nav>
-                <button class="nav-link" onclick="scrollToSection('about')">About Me</button>
-                <button class="nav-link" onclick="scrollToSection('projects')">Projects</button>
-                <button class="nav-link" onclick="scrollToSection('contact')">Contact</button>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <section id="about">
+    <section id="hero" class="hero">
         <div class="container">
-            <h2>About Me</h2>
-            <p>Hi! I’m Colby Jacobs, a passionate software engineer and game developer. I love creating innovative and efficient software solutions, whether it’s building exciting games or working on real-world applications.</p>
+            <h2>Welcome to My Portfolio</h2>
+            <p>Exploring the world of software engineering and game development.</p>
         </div>
     </section>
 
-    <section id="projects">
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a passionate software engineer and application developer, dedicated to creating impactful tools and programs that solve real-world problems.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
         <div class="container">
             <h2>Projects</h2>
-            <div class="project-grid">
+            <div class="projects-grid">
                 <div class="project-card">
-                    <h3>Valley Of Unity</h3>
-                    <p>A thrilling adventure game set in a dynamic, ever-changing world.</p>
-                    <a href="downloads/ValleyOfUnity.zip" class="button">Download</a>
+                    <video controls>
+                        <source src="videos/valley-of-unity.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="project-info">
+                        <h3>Valley Of Unity</h3>
+                        <p>A thrilling adventure game set in a dynamic, ever-changing world.</p>
+                        <a href="https://drive.google.com/uc?export=download&id=1lDNPbVfURGzttpYYLi7DtZFWx8GDNQtU" class="btn">Download</a>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <h3>Swap Dash</h3>
-                    <p>A fast-paced puzzle game where strategy and speed are key to success.</p>
-                    <a href="downloads/SwapDash.zip" class="button">Download</a>
+                    <video controls>
+                        <source src="videos/swap-dash.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="project-info">
+                        <h3>Swap Dash</h3>
+                        <p>A fast-paced puzzle game where strategy and speed are key to success.</p>
+                        <a href="https://drive.google.com/uc?export=download&id=16qneKSmQ12bWwo38MhOiFykYhA-fGAc8" class="btn">Download</a>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <h3>Fatal Business: Legendary Adventure</h3>
-                    <p>An epic journey through a legendary world filled with business and adventure.</p>
-                    <a href="downloads/FatalBusiness.zip" class="button">Download</a>
+                    <video controls>
+                        <source src="videos/fatal-business.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="project-info">
+                        <h3>Fatal Business: Legendary Adventure</h3>
+                        <p>An epic journey through a legendary world filled with business and adventure.</p>
+                        <a href="https://drive.google.com/uc?export=download&id=1ybkEIyjGLUt0apLmZnRZWoVrBH60aLcM" class="btn">Download</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="contact">
         <div class="container">
-            <h2>Contact</h2>
-            <p>Feel free to reach out to me at <a href="mailto:crj21b@fsu.edu">crj21b@fsu.edu</a></p>
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out for collaboration or just to connect!</p>
+            <p>Email: <a href="mailto:crj21b@fsu.edu">crj21b@fsu.edu</a></p>
         </div>
     </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Colby Jacobs. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
