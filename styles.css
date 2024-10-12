@@ -43,9 +43,8 @@ nav ul li a {
     text-align: center;
 }
 
-h2, h3, h4 {
+h2, h3 {
     color: #333;
-    margin: 1rem 0; /* Add some margin for better spacing */
 }
 
 .project {
@@ -55,12 +54,13 @@ h2, h3, h4 {
 }
 
 .project-info {
-    flex: 1;
+    flex: 1; /* Allow it to take all available space */
     text-align: left; /* Left-align text */
+    margin-right: 20px; /* Add margin to separate from the video */
 }
 
 .project-video {
-    max-width: 150px; /* Adjust the size of the video */
+    max-width: 150px; /* Smaller video size */
     margin-left: 20px; /* Space between text and video */
 }
 
