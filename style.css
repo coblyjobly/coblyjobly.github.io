@@ -1,0 +1,106 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Container for Layout */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* About Section Styling */
+.about {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2em;
+}
+
+.about p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+/* Projects Section Styling */
+.projects {
+    background-color: #eaeaea;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.projects .project-item {
+    margin: 20px 0;
+}
+
+.projects h3 {
+    font-size: 1.5em;
+}
+
+/* Contact Section Styling */
+.contact {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
