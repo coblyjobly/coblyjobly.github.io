@@ -47,7 +47,7 @@ nav ul li a {
 
 h2, h3 {
     color: #333;
-    font-size: 1.5rem; /* Larger text */
+    font-size: 1.8rem; /* Larger text */
 }
 
 .project {
@@ -67,7 +67,7 @@ h2, h3 {
 }
 
 .project-video {
-    max-width: 250px; /* Larger video size */
+    max-width: 300px; /* Slightly larger video size */
     margin-left: 20px; /* Space between text and video */
 }
 
