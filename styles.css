@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #f5f5dc; /* Beige background */
 }
 
 .container {
@@ -24,6 +25,7 @@ header h1 {
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center; /* Center the navigation links */
 }
 
 nav ul li {
@@ -37,7 +39,7 @@ nav ul li a {
 }
 
 .hero {
-    background: #007bff;
+    background: #28a745; /* Green color */
     color: #fff;
     padding: 2rem 0;
     text-align: center;
@@ -45,12 +47,17 @@ nav ul li a {
 
 h2, h3 {
     color: #333;
+    font-size: 1.5rem; /* Larger text */
 }
 
 .project {
     display: flex;
     align-items: flex-start;
-    margin: 20px 0;
+    margin: 40px 0; /* More space between sections */
+}
+
+.reverse {
+    flex-direction: row-reverse; /* Reverse order for alternating layout */
 }
 
 .project-info {
@@ -60,14 +67,14 @@ h2, h3 {
 }
 
 .project-video {
-    max-width: 150px; /* Smaller video size */
+    max-width: 250px; /* Larger video size */
     margin-left: 20px; /* Space between text and video */
 }
 
 .btn {
     display: inline-block;
     padding: 10px 15px;
-    background: #007bff;
+    background: #28a745; /* Green button */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -75,7 +82,7 @@ h2, h3 {
 }
 
 .btn:hover {
-    background: #0056b3;
+    background: #218838; /* Darker green on hover */
 }
 
 footer {
