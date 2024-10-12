@@ -74,8 +74,21 @@ nav ul li a {
     margin: 20px 0; /* Space between projects */
     border-radius: 8px;
     display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack elements vertically */
     align-items: flex-start; /* Align items to the start (left) */
+}
+
+.project-info {
+    flex-grow: 1; /* Allow the info section to take available space */
+    margin-right: 20px; /* Space between info and video */
+}
+
+.project-title {
+    font-size: 1.5em; /* Increase title size */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.project-description {
+    margin-bottom: 10px; /* Space below the description */
 }
 
 .project-video {
