@@ -47,17 +47,17 @@ nav ul li a {
 
 h2, h3 {
     color: #333;
-    font-size: 1.8rem; /* Larger text */
+    font-size: 2rem; /* Bigger text for section titles */
+}
+
+p {
+    font-size: 1.2rem; /* Bigger text for paragraphs */
 }
 
 .project {
     display: flex;
     align-items: flex-start;
-    margin: 40px 0; /* More space between sections */
-}
-
-.reverse {
-    flex-direction: row-reverse; /* Reverse order for alternating layout */
+    margin: 40px 0; /* More space between projects */
 }
 
 .project-info {
@@ -68,7 +68,7 @@ h2, h3 {
 }
 
 .project-video {
-    max-width: 450px; /* Increased video size */
+    max-width: 500px; /* Increased video size */
     margin-left: 20px; /* Space between text and video */
 }
 
