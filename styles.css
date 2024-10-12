@@ -1,26 +1,27 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: beige; /* Beige background */
-    color: #333; /* Dark text for contrast */
-    margin: 0;
-    padding: 0;
+    background-color: beige;
+    color: #333;
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-    padding: 20px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 header {
-    background-color: green; /* Green header */
+    background: #006400; /* Dark green */
     color: white;
     padding: 10px 0;
-    text-align: center; /* Centering header text */
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
@@ -35,51 +36,63 @@ nav a {
 }
 
 .hero {
-    background-color: lightgreen; /* Light green for hero section */
+    padding: 50px 0;
     text-align: center;
-    padding: 20px;
 }
 
-section {
-    margin: 40px 0; /* More space between sections */
+.about, .contact {
+    padding: 40px 0;
 }
 
-h2 {
-    text-align: center; /* Centered section titles */
-    font-size: 2.5em; /* Larger section titles */
+.projects {
+    padding: 40px 0;
 }
 
 .project {
-    background-color: #d5f5d5; /* Light green for project banners */
-    border-radius: 8px; /* Rounded corners */
-    padding: 15px; /* Padding inside project banners */
-    margin-bottom: 20px; /* Space between projects */
-    display: flex; /* Flexbox for layout */
-    align-items: center; /* Center items vertically */
+    background: #e0f8e0; /* Light green */
+    margin: 20px 0;
+    padding: 20px;
+    display: flex; /* Use flexbox for layout */
+    align-items: flex-start; /* Align items at the start */
 }
 
-.project-info {
-    flex: 1; /* Allow project info to take available space */
-    margin-right: 20px; /* Space between text and video */
+.project h3 {
+    margin: 0;
+    font-size: 1.8em; /* Increased font size for title */
+    flex: 1; /* Allow the title to take available space */
+    text-align: right; /* Align title to the right */
+}
+
+.project p {
+    font-size: 1.2em; /* Increased font size for description */
+    margin: 10px 0; /* Added margin for spacing */
+    flex: 1; /* Allow the description to take available space */
+    text-align: right; /* Align text to the right */
 }
 
 .project-video {
-    max-width: 300px; /* Adjust video width to make it larger */
-    max-height: 200px; /* Adjust video height */
+    margin-left: 20px; /* Space between text and video */
+    width: 250px; /* Set video width */
 }
 
 .btn {
-    display: inline-block;
-    background-color: green; /* Green button */
+    display: block; /* Make the download link block-level */
+    margin: 10px auto; /* Center the button */
+    padding: 10px 20px;
+    background: #4caf50; /* Green background for button */
     color: white;
-    padding: 10px 15px;
+    text-align: center;
     text-decoration: none;
-    border-radius: 5px; /* Rounded button corners */
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #45a049; /* Darker green on hover */
 }
 
 footer {
-    text-align: center; /* Center footer text */
-    padding: 10px 0;
-    background-color: green; /* Green footer */
+    background: #006400; /* Dark green */
     color: white;
+    text-align: center;
+    padding: 20px 0;
 }
