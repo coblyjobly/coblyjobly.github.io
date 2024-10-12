@@ -64,10 +64,11 @@ h2, h3 {
     flex: 1; /* Allow it to take all available space */
     text-align: left; /* Left-align text */
     margin-right: 20px; /* Add margin to separate from the video */
+    max-width: 300px; /* Smaller text box */
 }
 
 .project-video {
-    max-width: 300px; /* Slightly larger video size */
+    max-width: 450px; /* Increased video size */
     margin-left: 20px; /* Space between text and video */
 }
 
