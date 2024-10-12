@@ -77,7 +77,7 @@ nav a {
 
 .btn {
     display: block; /* Make the download link block-level */
-    margin: 10px auto; /* Center the button */
+    margin: 10px 0; /* Center the button */
     padding: 10px 20px;
     background: #4caf50; /* Green background for button */
     color: white;
@@ -85,6 +85,7 @@ nav a {
     text-decoration: none;
     border-radius: 5px;
 }
+
 
 .btn:hover {
     background: #45a049; /* Darker green on hover */
