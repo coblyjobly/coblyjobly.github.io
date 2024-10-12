@@ -1,1 +1,1 @@
-coblyjobly.github.io
+https://coblyjobly.github.io
