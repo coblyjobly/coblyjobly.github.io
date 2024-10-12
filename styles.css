@@ -1,98 +1,85 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: beige; /* Beige background */
+    color: #333; /* Dark text for contrast */
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background-color: #f5f5dc; /* Beige background */
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 80%;
     margin: 0 auto;
+    padding: 20px;
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-}
-
-header h1 {
-    text-align: center;
+    background-color: green; /* Green header */
+    color: white;
+    padding: 10px 0;
+    text-align: center; /* Centering header text */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center; /* Center the navigation links */
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin: 0 15px;
 }
 
-nav ul li a {
-    color: #fff;
+nav a {
+    color: white;
     text-decoration: none;
 }
 
 .hero {
-    background: #28a745; /* Green color */
-    color: #fff;
-    padding: 2rem 0;
+    background-color: lightgreen; /* Light green for hero section */
     text-align: center;
+    padding: 20px;
 }
 
-h2, h3 {
-    color: #333;
-    font-size: 2rem; /* Bigger text for section titles */
-    text-align: center; /* Center section titles */
+section {
+    margin: 40px 0; /* More space between sections */
 }
 
-p {
-    font-size: 1.2rem; /* Bigger text for paragraphs */
+h2 {
+    text-align: center; /* Centered section titles */
+    font-size: 2.5em; /* Larger section titles */
 }
 
 .project {
-    display: flex;
-    align-items: flex-start;
-    margin: 40px 0; /* More space between projects */
-    padding: 20px; /* Padding for inner space */
-    border: 2px solid #28a745; /* Green border for project banner */
-    border-radius: 10px; /* Rounded corners for banner */
-    background-color: #eaf8e0; /* Light green background for project */
+    background-color: #d5f5d5; /* Light green for project banners */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside project banners */
+    margin-bottom: 20px; /* Space between projects */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
 }
 
 .project-info {
-    flex: 1; /* Allow it to take all available space */
-    text-align: left; /* Left-align text */
-    margin-right: 20px; /* Add margin to separate from the video */
+    flex: 1; /* Allow project info to take available space */
+    margin-right: 20px; /* Space between text and video */
 }
 
 .project-video {
-    max-width: 400px; /* Adjusted video size */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 250px; /* Adjust video width */
+    max-height: 150px; /* Adjust video height */
 }
 
 .btn {
     display: inline-block;
+    background-color: green; /* Green button */
+    color: white;
     padding: 10px 15px;
-    background: #28a745; /* Green button */
-    color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.btn:hover {
-    background: #218838; /* Darker green on hover */
+    border-radius: 5px; /* Rounded button corners */
 }
 
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+    text-align: center; /* Center footer text */
+    padding: 10px 0;
+    background-color: green; /* Green footer */
+    color: white;
 }
