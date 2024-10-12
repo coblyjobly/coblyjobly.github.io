@@ -3,57 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Colby Jacobs</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Colby Jacobs - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <div class="container">
             <h1>Colby Jacobs</h1>
             <nav>
-                <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+                <button class="nav-link" onclick="scrollToSection('about')">About Me</button>
+                <button class="nav-link" onclick="scrollToSection('projects')">Projects</button>
+                <button class="nav-link" onclick="scrollToSection('contact')">Contact</button>
             </nav>
         </div>
     </header>
 
-    <!-- About Me Section -->
-    <section id="about" class="about">
+    <section id="about">
         <div class="container">
             <h2>About Me</h2>
-            <p>Hello! I'm Colby Jacobs, a software engineer passionate about creating efficient and purposeful tools. I enjoy leading and contributing to impactful projects. My experience ranges from application development to database design, and I love solving real-world problems with code.</p>
+            <p>Hi! I’m Colby Jacobs, a passionate software engineer and game developer. I love creating innovative and efficient software solutions, whether it’s building exciting games or working on real-world applications.</p>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="projects">
         <div class="container">
             <h2>Projects</h2>
-            <div class="project-item">
-                <h3>Sustain-A-Hub</h3>
-                <p>A sustainability web app that connects local environmental groups to promote their work and events.</p>
-            </div>
-            <div class="project-item">
-                <h3>Movie Database App</h3>
-                <p>A C++ application that organizes a movie database with various sorting and export functionalities.</p>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Valley Of Unity</h3>
+                    <p>A thrilling adventure game set in a dynamic, ever-changing world.</p>
+                    <a href="downloads/ValleyOfUnity.zip" class="button">Download</a>
+                </div>
+                <div class="project-card">
+                    <h3>Swap Dash</h3>
+                    <p>A fast-paced puzzle game where strategy and speed are key to success.</p>
+                    <a href="downloads/SwapDash.zip" class="button">Download</a>
+                </div>
+                <div class="project-card">
+                    <h3>Fatal Business: Legendary Adventure</h3>
+                    <p>An epic journey through a legendary world filled with business and adventure.</p>
+                    <a href="downloads/FatalBusiness.zip" class="button">Download</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact">
         <div class="container">
             <h2>Contact</h2>
-            <p>If you'd like to get in touch, feel free to <a href="mailto:crj21b@fsu.edu">send me an email</a>.</p>
+            <p>Feel free to reach out to me at <a href="mailto:crj21b@fsu.edu">crj21b@fsu.edu</a></p>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Colby Jacobs</p>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
