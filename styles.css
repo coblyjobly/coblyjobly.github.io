@@ -1,137 +1,110 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: beige; /* Beige background for the whole page */
+    background-color: beige;
     color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-/* Container for consistent padding */
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
 
-/* Header Styles */
 header {
-    background: #4caf50; /* Green background for header */
+    background: green;
+    color: white;
     padding: 10px 0;
 }
 
 header h1 {
     text-align: center;
-    color: white;
+}
+
+nav {
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center; /* Center the navigation links */
+    padding: 0;
 }
 
 nav ul li {
+    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
-/* Hero Section Styles */
 .hero {
-    background: #a5d6a7; /* Light green background for hero section */
+    padding: 20px 0;
     text-align: center;
-    padding: 40px 0;
+    background: #f4f4f4;
 }
 
-/* About Section Styles */
-.about {
-    text-align: center;
+.about, .contact, .projects {
     padding: 40px 0;
+    text-align: center;
 }
 
-/* Projects Section Styles */
 .projects {
-    padding: 40px 0;
-}
-
-.projects h2 {
-    text-align: center; /* Center the section title */
+    background-color: lightgreen;
 }
 
 .project {
-    background: #e8f5e9; /* Light green background for project sections */
-    padding: 20px;
-    margin: 20px 0; /* Space between projects */
+    display: flex;
+    align-items: flex-start; /* Aligns video and text properly */
+    background: #e3f2e0;
+    margin: 20px 0;
+    padding: 15px;
     border-radius: 8px;
-    display: flex; /* Use flexbox for alignment */
-    align-items: flex-start; /* Align items to the start (left) */
 }
 
 .project-info {
-    flex-grow: 1; /* Allow the info section to take available space */
-    margin-right: 20px; /* Space between info and video */
+    flex: 1;
+    padding-right: 20px; /* Adds space between text and video */
 }
 
 .project-title {
-    font-size: 1.5em; /* Increase title size */
-    margin-bottom: 10px; /* Space below the title */
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
 }
 
 .project-description {
-    margin-bottom: 10px; /* Space below the description */
+    font-size: 1.1em;
+    margin: 0 0 10px 0;
 }
 
 .project-video {
-    margin-top: 10px; /* Space above the video */
-    width: 100%; /* Make video responsive */
-    max-width: 400px; /* Set a max width for videos */
+    width: 320px; /* Sets video width */
+    height: auto; /* Adjusts height automatically */
 }
 
 .btn {
-    display: block; /* Make the download link block-level */
-    margin-top: 10px; /* Space between the description and button */
-    padding: 10px 20px;
-    background: #4caf50; /* Green background for button */
+    display: inline-block;
+    background: green;
     color: white;
-    text-align: center;
+    padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
+    transition: background 0.3s;
 }
 
-/* Contact Section Styles */
-.contact {
-    text-align: center;
-    padding: 40px 0;
+.btn:hover {
+    background: darkgreen;
 }
 
-/* Footer Styles */
 footer {
-    background: #4caf50; /* Green background for footer */
+    background: green;
     color: white;
     text-align: center;
     padding: 10px 0;
     position: relative;
     bottom: 0;
     width: 100%;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    .project {
-        padding: 15px;
-    }
-
-    .project-video {
-        max-width: 100%; /* Allow full width on small screens */
-    }
 }
