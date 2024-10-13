@@ -2,8 +2,15 @@ html {
     scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: 'Frutiger';
+    src: url('frutiger.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    font-family: 'Frutiger', Arial, Helvetica, sans-serif;
+    font-family: 'Frutiger', Arial, Helvetica, sans-serif; /* Fallbacks */
     background: linear-gradient(135deg, #FFF9E5, #F4F4F4); /* Light Cream to a lighter background */
     color: #333;
     margin: 0;
