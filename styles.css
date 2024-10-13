@@ -105,7 +105,7 @@ nav ul li a:hover {
     text-align: left;
     margin-bottom: 50px; /* Increased space below the about text */
     margin-right: 150px;
-    font-size: 21px;
+    font-size: 23px;
 }
 
 .skills-container {
@@ -116,6 +116,7 @@ nav ul li a:hover {
     padding: 10px; /* Padding around the skills section */
     border-radius: 12px; /* Rounded corners for aesthetics */
     margin-top: 20px; /* Space above the skills section */
+    margin-bottom: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
 }
 
@@ -139,11 +140,11 @@ nav ul li a:hover {
 
 .lang-lists .about-skills {
     flex: 1; /* Each list takes equal space */
-    margin-right: 20px; /* Space between the two lists */
+    margin-right: 8px; /* Space between the two lists */
 }
 
 .lang-lists .about-skills:last-child {
-    margin-right: 0; /* No margin on the last list */
+    margin-right: 17px; /* No margin on the last list */
 }
 
 .about-skills {
@@ -151,7 +152,7 @@ nav ul li a:hover {
     margin: 0 20px; /* Space between the lists */
     padding: 0; /* Remove default padding */
     flex: 1; /* Allow lists to grow equally */
-    font-size: 18px;
+    font-size: 21px;
 }
 
 .about-skills li {
