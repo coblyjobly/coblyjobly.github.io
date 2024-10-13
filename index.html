@@ -62,14 +62,14 @@
                             <li>Leadership</li>
                             <li>Technical Support</li>
                             <li>Data Structures & Algorithms</li>
-                            <li>Cloud Computing (Azure, AWS)</li>
-                            <li>Computer Networks</li>
+                            <li>Web Development</li>
+                            <li>Game Development</li>
                             <li>Problem Solving</li>
+                            <li>Databases</li>
                         </ul>
                         <ul class="about-skills">
-                            <li>Databases</li>
-                            <li>Game Development</li>
-                            <li>Web Development</li>
+                            <li>Computer Networks</li>
+                            <li>Cloud Computing (Azure, AWS)</li>
                             <li>Virtual Reality Development</li>
                             <li>Troubleshooting</li>
                             <li>Innovation</li>
@@ -112,7 +112,7 @@
                     <p>Contributions: Leadership, HTML, CSS, JavaScript(React), SQL, Python </p>
                     <a href="#" class="btn">Coming Soon</a>
                 </div>
-                <img src="images/Sustain-a-hub.png" alt="An image from My Image Project" class="project-image" style="width: 100%; height: auto;">
+                <img src="images/Sustain-a-hub.png" alt="Sustain-A-Hub Project logo" class="project-image" style="width: 100%; height: auto;">
             </div>
 
             <div class="project">
@@ -121,6 +121,7 @@
                     <p class="project-timeframe">January - April 2024</p>
                     <p class="project-description"><em>Valley of Unity</em> is an action-packed adventure game set in a mysterious land where no one can escape. You take on the role of a knight who uncovers a mystical feather, hinting at a way out. To break free, you must gather more feathers hidden throughout the Valley.</p>
                     <p class="project-description">Navigate through a mix of top-down exploration in the overworld and intense side-scrolling combat in dungeons. Along the way, NPCs will guide you, pointing you towards the feathers and your ultimate goal—climbing the final mountain to unlock the truth behind the Valley. Made with Unity.</p>
+                    <p></p>
                     <p>Contributions: Project Management, Game Design, C#, Unity, Sound Design, Sprite Art</p>
                     <a href="https://drive.google.com/uc?export=download&id=1lDNPbVfURGzttpYYLi7DtZFWx8GDNQtU" class="btn">Download</a>
                 </div>
@@ -129,31 +130,32 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
-
+            
             <div class="project">
                 <div class="project-info">
                     <h3 class="project-title">Swap Dash</h3>
                     <p class="project-timeframe">January 2021</p>
                     <p class="project-description">In <em>Swap Dash</em>, you take on the role of a clever raccoon determined to retrieve your family's secret sandwich recipe from a high-tech sandwich factory. This fast-paced puzzle game immerses you in a series of challenging levels, where you must navigate the factory's intricate layout.</p>
                     <p class="project-description">Equipped with a unique topping gun, you can shoot switches that rearrange the factory's environment, enabling you to manipulate the layout to your advantage. Strategy and quick thinking are essential as you solve puzzles to progress through each level and ultimately reclaim the cherished recipe. Made with GameMaker.</p>
+                    <p></p>
                     <p style="margin: 0 0 -10px 0;">Awarded 1st Place at the Future Business Leaders of America District Competition</p>
-                    <p>Contributions: Project Management, Game Design, Sprite Art, Sound Design, Game Maker Language(GML)</p>
+                    <p>Contributions: Project Management, Game Design, Sprite Art, Sound Design, Game Maker Language (GML)</p>
                     <a href="https://drive.google.com/uc?export=download&id=16qneKSmQ12bWwo38MhOiFykYhA-fGAc8" class="btn">Download</a>
                 </div>
-                <video class="project-video" controls>
+                <video class="project-video" controls poster="images/swap.png">
                     <source src="videos/swap-dash.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-
+            
             <div class="project">
                 <div class="project-info">
                     <h3 class="project-title">Fatal Business: Legendary Adventure</h3>
                     <p class="project-timeframe">January 2020</p>
                     <p class="project-description"><em>Fatal Business: Legendary Adventure</em> is a beat 'em up game created for the Future Business Leaders of America (FBLA) to highlight their programs. Players take on the role of Mr. Business as he travels to different global conferences. Along the way, he battles evil business bots, representing various challenges in the business world. The game combines fun action with lessons on leadership and teamwork, making it an entertaining way to learn about the values of FBLA. Made with Unity.</p>
+                    <p></p>
                     <p style="margin: 0 0 -10px 0;">Awarded 1st Place at the Future Business Leaders of America District Competition</p>
                     <p>Contributions: C#, Sprite Art, Background Art, Sound Design</p>
-                    <p></p>
                     <p></p>
                     <a href="https://drive.google.com/uc?export=download&id=1ybkEIyjGLUt0apLmZnRZWoVrBH60aLcM" class="btn">Download</a>
                 </div>
@@ -167,11 +169,13 @@
     </section>
 
     <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Feel free to reach out to connect!</p>
-            <p><a href="mailto:colbyjacobs02@gmail.com">colbyjacobs02@gmail.com</a></p>
-            <p><a href="https://www.linkedin.com/in/colby-jacobs">LinkedIn</a></p>
+        <div class="contact-hero">
+            <div class="container">
+                <h2 style="margin: -10px 0 0 0;">Contact</h2>
+                <p class="contacts">Feel free to reach out to connect!</p>
+                <p class="contacts a"><a href="mailto:colbyjacobs02@gmail.com">colbyjacobs02@gmail.com</a></p>
+                <p class="contacts a" style="margin: 0 0 -5px 0;"><a href="https://www.linkedin.com/in/colby-jacobs">LinkedIn</a></p>
+            </div>
         </div>
     </section>
 
@@ -184,3 +188,19 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+<script>
+    // Select all video elements with the class "project-video"
+    const videos = document.querySelectorAll('.project-video');
+
+    // Function to pause all videos except the one that is currently playing
+    videos.forEach(video => {
+        video.addEventListener('play', () => {
+            videos.forEach(otherVideo => {
+                if (otherVideo !== video) {
+                    otherVideo.pause(); // Pause all other videos
+                }
+            });
+        });
+    });
+</script>
