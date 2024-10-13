@@ -286,6 +286,19 @@ nav ul li a:hover {
     text-decoration: underline; /* Optional: add underline on hover */
 }
 
+.back-to-top {
+    color: white; /* Set the text color to white */
+    text-decoration: none; /* Remove underline from link */
+    display: block; /* Make it block to ensure it appears above other text */
+    margin-bottom: 10px; /* Add space below the link */
+    transition: color 0.3s; /* Smooth transition for color */
+}
+
+/* Optional: Color change on hover */
+.back-to-top:hover {
+    color: rgba(255, 255, 255, 0.8); /* Slightly change color on hover */
+}
+
 footer {
     background: linear-gradient(135deg, #228B22, #87CEEB); /* Forest Green to Sky Blue */
     color: white;
