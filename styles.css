@@ -231,7 +231,7 @@ nav ul li a:hover {
 
 .btn {
     display: inline-block;
-    background: #87CEEB; /* boo */
+    background: #32c5ff; /* boo */
     color: white;
     padding: 10px 15px;
     text-decoration: none;
@@ -241,7 +241,7 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background: #3a738a; /* Darker shade */
+    background: #1f7699; /* Darker shade */
     transform: scale(1.03); /* Slightly grow on hover */
 }
 
