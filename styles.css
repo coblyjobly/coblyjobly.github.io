@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    background-color: #FFF9E5; /* Light Cream */
-    color: #556B2F; /* Dark Olive Green */
+    background: linear-gradient(135deg, #FFF9E5, #F4F4F4); /* Light Cream to a lighter background */
+    color: #333;
     margin: 0;
     padding: 0;
 }
@@ -39,16 +39,13 @@ header h1 {
     text-align: center;
     font-size: 4em;
     margin: 10px 0 5px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for depth */
 }
 
-header h2 {
+header h2, h2 {
     text-align: center;
-    font-size: 3em;
-}
-
-h2 {
-    text-align: center;
-    font-size: 3em;
+    font-size: 3em; /* Ensuring consistent header size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for depth */
 }
 
 nav {
@@ -56,6 +53,7 @@ nav {
 }
 
 nav ul {
+    list-style-type: none;
     display: flex;
     justify-content: center; /* Centers the nav items */
     gap: 60px; /* Adds space between the links */
@@ -65,7 +63,7 @@ nav ul li a {
     padding: 10px 15px; /* Adds padding inside the links */
     text-decoration: none;
     color: white; /* Adjust link color if needed */
-    font-size: 1.2em;
+    font-size: 1.2em; /* Set specific font size for nav links */
 }
 
 .about .container {
@@ -85,7 +83,8 @@ nav ul li a {
     width: 65%; /* Allocating 65% width to the text */
     text-align: left;
     margin-bottom: 50px; /* Increased space below the about text */
-    margin-right: 100px;
+    margin-right: 150px;
+    font-size: 20px;
 }
 
 .skills-container {
@@ -96,6 +95,7 @@ nav ul li a {
     padding: 10px; /* Padding around the skills section */
     border-radius: 12px; /* Rounded corners for aesthetics */
     margin-top: 20px; /* Space above the skills section */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
 }
 
 .skills-header {
@@ -109,12 +109,28 @@ nav ul li a {
     width: 100%; /* Full width for alignment */
     margin-top: 10px; /* Space above the lists */
 }
+.lang-lists {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between the lists */
+    width: 100%; /* Full width for alignment */
+    margin-top: 10px; /* Space above the lists */
+}
+
+.lang-lists .about-skills {
+    flex: 1; /* Each list takes equal space */
+    margin-right: 20px; /* Space between the two lists */
+}
+
+.lang-lists .about-skills:last-child {
+    margin-right: 0; /* No margin on the last list */
+}
 
 .about-skills {
     list-style-type: none; /* Remove default bullet points */
     margin: 0 20px; /* Space between the lists */
     padding: 0; /* Remove default padding */
     flex: 1; /* Allow lists to grow equally */
+    font-size: 20px;
 }
 
 .about-skills li {
@@ -133,16 +149,22 @@ nav ul li a {
 }
 
 .projects {
-    background-color: lightgreen;
+    background-color: lightgreen; /* Background for projects section */
 }
 
 .project {
     display: flex;
     align-items: flex-start; /* Aligns content properly */
-    background: #e3f2e0;
+    background: #e3f2e0; /* Light background for project cards */
     margin: 20px 0;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 12px; /* Rounded corners for cards */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Box shadow for cards */
+    transition: transform 0.2s; /* Reduced hover transition speed */
+}
+
+.project:hover {
+    transform: translateY(-3px); /* Slightly raise effect on hover */
 }
 
 .project-info {
@@ -185,17 +207,18 @@ nav ul li a {
 
 .btn {
     display: inline-block;
-    background: #FF6347; /* Salmon Pink */
+    background: #87CEEB; /* boo */
     color: white;
     padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s; /* Reduced movement on hover */
     margin-top: 20px; /* Adds spacing above the button */
 }
 
 .btn:hover {
-    background: #FF4500; /* Darker shade of Salmon Pink */
+    background: #3a738a; /* Darker shade */
+    transform: scale(1.03); /* Slightly grow on hover */
 }
 
 footer {
