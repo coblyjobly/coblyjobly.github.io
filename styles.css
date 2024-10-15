@@ -86,6 +86,11 @@ nav ul li a:hover {
     border-radius: 5px; /* Rounded corners for the hover effect */
 }
 
+.fa-external-link-alt {
+    font-size: 12px; /* Adjust the size of the icon */
+    margin-left: 5px; /* Space between the text and icon */
+    vertical-align: middle; /* Align with the text */
+}
 
 .about .container {
     display: flex;
