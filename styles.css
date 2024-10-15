@@ -76,7 +76,7 @@ nav ul li a {
     padding: 10px 15px;
     text-decoration: none;
     color: white;
-    font-size: 1.2em;
+    font-size: 1.3em;
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
 }
 
@@ -120,8 +120,8 @@ nav ul li a:hover {
     background-color: #e0f7e0; /* Light green background */
     padding: 10px; /* Padding around the skills section */
     border-radius: 12px; /* Rounded corners for aesthetics */
-    margin-top: 20px; /* Space above the skills section */
-    margin-bottom: 10px;
+    margin-top: 30px; /* Space above the skills section */
+    margin-bottom: 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
 }
 
