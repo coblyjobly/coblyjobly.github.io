@@ -188,7 +188,7 @@ nav ul li a:hover {
     display: flex;
     align-items: flex-start; /* Aligns content properly */
     background: #e3f2e0; /* Light background for project cards */
-    margin: 20px 0;
+    margin: 50px 0;
     padding: 15px;
     border-radius: 12px; /* Rounded corners for cards */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Box shadow for cards */
@@ -287,6 +287,7 @@ nav ul li a:hover {
     font-size: 25px;
     margin: 10px 0 10px 0;
 }
+
 
 .contacts a {
     color: #FF6347; /* Bright coral for links */
