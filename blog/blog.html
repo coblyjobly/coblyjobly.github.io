@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colby Jacobs Blog</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/fishpfp.png" sizes="32x32">
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Colby Jacobs Portfolio">
+    <meta property="og:description" content="Colby Jacobs Portfolio">
+    <meta property="og:image" content="../images/profile.jpg">
+    <meta property="og:url" content="https://coblyjobly.github.io">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Colby Jacobs Portfolio">
+    <meta name="twitter:description" content="Colby Jacobs Portfolio">
+    <meta name="twitter:image" content="../images/profile.jpg">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="../images/profile.jpg">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+</head>
+<body>
+    <div id="top"></div>
+    <header>
+        <div class="container">
+            <h1>Colby Jacobs</h1>
+            <img src="../images/profile.jpg" alt="Profile Picture of Colby Jacobs" class="profile-picture">
+            <nav>
+                <ul>
+                    <li style="clear: left;"><a href="../index.html">Home</a></li>
+                    <li style="clear: left;"><a href="#contact">Contact</a></li>
+                    <li style="clear: left;"><a href="../cjacobs-resume-web.pdf" target="_blank">Resume <i class="fas fa-external-link-alt"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div id="post-content" class="post-box"></div> 
+
+            <div class="post-navigation">
+                <button id="prev-post" onclick="showPost(currentPost - 1)">← Previous</button>
+                <button id="next-post" onclick="showPost(currentPost + 1)">Next →</button>
+            </div>
+            <div id="post-counter"></div>
+        </div>
+    </main>
+
+    <section id="contact" class="contact">
+        <div class="contact-hero">
+            <div class="container">
+                <h2 style="margin: -10px 0 0 0;">Contact</h2>
+                <p class="contacts">Feel free to reach out to connect!</p>
+                <p class="contacts a"><a href="mailto:colbyjacobs02@gmail.com"><i class="fas fa-envelope"></i> colbyjacobs02@gmail.com</a></p>
+                <p class="contacts a" style="margin: 0 0 -5px 0;"><a href="https://www.linkedin.com/in/colby-jacobs">LinkedIn <i class="fas fa-external-link-alt"></i></a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="#top" class="back-to-top">Back to Top</a>
+            <p>Colby Jacobs 2024</p>
+        </div>
+    </footer>
+
+    <script>
+        let posts = [
+            { title: 'Beginning Development on Our Patch', date: '10/21/24', filename: 'post1.html' },
+            { title: 'Post 2', date: '1', filename: 'post2.html' }
+        ];
+        
+        posts = posts.reverse();
+        
+        let currentPost = 0;
+    
+        async function loadPost(postName) {
+            const response = await fetch(`_posts/${postName}`);
+            if (!response.ok) {
+                console.error('Error loading post:', response.statusText);
+                return;
+            }
+            const html = await response.text();
+            document.getElementById('post-content').innerHTML = html;
+    
+            // Attach event listeners to buttons inside the post content after loading it
+            attachPostNavigationListeners();
+        }
+    
+        function showPost(index) {
+            if (index < 0 || index >= posts.length) return;
+            currentPost = index;
+            loadPost(posts[currentPost].filename);
+    
+            document.getElementById('post-counter').innerText = `Post ${currentPost + 1} of ${posts.length}`;
+    
+            document.getElementById('prev-post').style.visibility = currentPost > 0 ? 'visible' : 'hidden';
+            document.getElementById('next-post').style.visibility = currentPost < posts.length - 1 ? 'visible' : 'hidden';
+        }
+    
+        // Reattach event listeners to the buttons inside each post (after the post content is loaded)
+        function attachPostNavigationListeners() {
+            const prevPostTop = document.getElementById('prev-post-top');
+            const nextPostTop = document.getElementById('next-post-top');
+    
+            if (prevPostTop) {
+                prevPostTop.style.visibility = currentPost > 0 ? 'visible' : 'hidden';
+                prevPostTop.addEventListener('click', () => showPost(currentPost - 1));
+            }
+            if (nextPostTop) {
+                nextPostTop.style.visibility = currentPost < posts.length - 1 ? 'visible' : 'hidden';
+                nextPostTop.addEventListener('click', () => showPost(currentPost + 1));
+            }
+        }
+    
+        window.onload = () => {
+            showPost(currentPost); // Load the first post
+    
+            document.getElementById('prev-post').addEventListener('click', () => showPost(currentPost - 1));
+            document.getElementById('next-post').addEventListener('click', () => showPost(currentPost + 1));
+        };
+    </script>
+    
+</body>
+</html>
