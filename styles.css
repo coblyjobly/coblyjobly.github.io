@@ -465,3 +465,153 @@ footer {
     color: rgba(255, 255, 255, 0.8);
 }
 
+
+/* Existing CSS code... */
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Standardize font size for mobile */
+    }
+
+    header h1 {
+        font-size: 2.5em; /* Smaller header size */
+    }
+
+    header h2, h2 {
+        font-size: 2em; /* Smaller subheader size */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 20px; /* Space between items */
+    }
+
+    .profile-picture {
+        width: 150px; /* Smaller profile picture */
+        height: 150px; /* Maintain aspect ratio */
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+    }
+
+    .about-text {
+        width: 100%; /* Full width for text */
+        margin-right: 0; /* Remove right margin on smaller screens */
+        font-size: 20px; /* Smaller font size for mobile */
+    }
+
+    .skills-header {
+        font-size: 1.5em; /* Adjust header font size for mobile */
+    }
+
+    .about-skills {
+        font-size: 16px; /* Even smaller font size for mobile */
+        margin: 0 5px; /* Adjust horizontal spacing between skills */
+        padding: 0; /* Reset padding if necessary */
+    }
+
+    .project {
+        flex-direction: column; /* Stack elements for mobile */
+        align-items: center; /* Center-align content */
+        width: 100%; /* Make card take up 100% of the screen width */
+        margin: 10px 0; /* Add vertical margin for spacing between cards */
+        padding: 20px; /* Padding for spacing inside the card */
+        box-sizing: border-box; /* Include padding and border in width calculation */
+    }
+
+    .post-no-animation {
+        margin: 15px 0; /* Vertical spacing between posts */
+        padding: 20px; /* Add padding for more internal space */
+        width: 100%; /* Make post card take up 100% of the screen width */
+        box-sizing: border-box; /* Include padding and border in width calculation */
+    }
+
+    .project-info {
+        padding: 10px; /* Smaller padding */
+        width: 100%; /* Full width */
+        margin-bottom: 10px; /* Space below */
+    }
+
+    .project-title {
+        font-size: 1.4em; /* Smaller title size */
+    }
+
+    .project-description {
+        font-size: 1.1em; /* Smaller description size */
+    }
+
+    .project-image,
+    .project-video {
+        width: 100%; /* Full width for images/videos */
+        max-width: 100%; /* Avoid overflow */
+    }
+
+    .project-image {
+        margin: 10px 0; /* Add space above and below */
+    }
+
+    /* New styles for blog posts */
+    .post-content {
+        flex-direction: column; /* Stack text and image vertically */
+        align-items: center; /* Center align */
+        margin: 20px 0; /* Space around posts */
+    }
+
+    .post-content .post-text {
+        font-size: 1.1em; /* Smaller font size for mobile */
+        margin: 0 0 10px 0; /* Space below text */
+        text-align: center; /* Center text on mobile */
+        margin-right: 0; /* Remove margin right */
+    }
+
+    .post-content .post-image {
+        max-width: 100%; /* Make image responsive */
+        margin: 0; /* Reset margin */
+    }
+
+    .post-header {
+        padding: 10px; /* Adjust padding */
+    }
+
+    .post-header h1 {
+        font-size: 1.8em; /* Smaller header size */
+    }
+
+    .post-header p {
+        font-size: 0.9em; /* Smaller date font size */
+    }
+
+    .post-navigation {
+        flex-direction: column; /* Stack buttons vertically */
+        margin-bottom: 20px; /* Adjust space below navigation */
+    }
+
+    .post-navigation button {
+        font-size: 16px; /* Smaller button font size */
+        padding: 8px 15px; /* Smaller padding for buttons */
+        margin: 5px 0; /* Margin between buttons */
+    }
+
+    #post-counter {
+        font-size: 1.2em; /* Adjust counter font size */
+        margin-bottom: 20px; /* Adjust space below counter */
+    }
+
+    .figcap {
+        font-size: 0.9em; /* Smaller caption font size */
+    }
+
+    .post-nav-top {
+        justify-content: center; /* Center the navigation buttons */
+    }
+
+    .post-nav-top button {
+        font-size: 18px; /* Adjust font size for buttons */
+    }
+
+    .contacts {
+        font-size: 18px; /* Smaller font size for mobile */
+    }
+}
