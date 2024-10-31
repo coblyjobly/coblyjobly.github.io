@@ -41,15 +41,15 @@
             display: flex;
             justify-content: center;
             background-color: white;
-            padding-bottom: 100px;  /* Increased padding at the bottom for scrollable whitespace */
             -webkit-overflow-scrolling: touch; /* Enables momentum scrolling on iOS */
         }
 
         #displayImage {
-            max-width: 100vw;           /* Constrain to viewport width */
-            max-height: calc(100vh - 20px); /* Constrain to viewport height minus padding */
-            object-fit: contain;        /* Maintain aspect ratio within these bounds */
-            display: none;              /* Hidden until an image is loaded */
+            max-width: 100vw;                  /* Constrain to viewport width */
+            max-height: 100vh;                 /* Constrain to viewport height */
+            object-fit: contain;               /* Maintain aspect ratio within these bounds */
+            display: none;                     /* Hidden until an image is loaded */
+            margin-bottom: 100px;              /* Adds scrollable space without shrinking the image */
         }
     </style>
 </head>
