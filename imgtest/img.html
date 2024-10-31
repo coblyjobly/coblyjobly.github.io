@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="apple-touch-icon" href="icon.png">
-    <title>Fullscreen Image Viewer</title>
+    <title>Venmo</title>
     <style>
         /* CSS Styling */
         * {
@@ -19,46 +19,40 @@
             overflow: hidden;
         }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        .outer-container {
             height: 100vh;
-            width: 100vw;
-            position: relative;
-        }
-
-        #imageInput {
-            margin-top: 20px;
-        }
-
-        .image-container {
-            width: 100%;
-            height: 100vh;
-            overflow-y: scroll;  /* Allow vertical scrolling */
-            overflow-x: hidden;  /* Prevent horizontal scrolling */
-            display: flex;
-            justify-content: center;
-            background-color: white;
+            overflow-y: scroll;          /* Allow vertical scrolling */
             -webkit-overflow-scrolling: touch; /* Enables momentum scrolling on iOS */
         }
 
+        .image-container {
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            height: 100vh;
+            width: 100vw;
+        }
+
         #displayImage {
-            max-width: 100vw;                  /* Constrain to viewport width */
-            max-height: 100vh;                 /* Constrain to viewport height */
-            object-fit: contain;               /* Maintain aspect ratio within these bounds */
-            display: none;                     /* Hidden until an image is loaded */
-            margin-bottom: 100px;              /* Adds scrollable space without shrinking the image */
+            max-width: 100vw;             /* Constrain to viewport width */
+            max-height: 100vh;            /* Constrain to viewport height */
+            object-fit: contain;          /* Maintain aspect ratio within these bounds */
+            display: none;                /* Hidden until an image is loaded */
+        }
+
+        /* Creates the extra scrollable space */
+        .spacer {
+            height: 40px; /* Adjust this height as needed to enable scrolling */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <input type="file" id="imageInput" accept="image/*">
+    <div class="outer-container">
         <div class="image-container">
+            <input type="file" id="imageInput" accept="image/*" style="margin-top: 20px;">
             <img id="displayImage" alt="Selected Image">
         </div>
+        <div class="spacer"></div> <!-- Extra space at the bottom for scrolling -->
     </div>
 
     <script>
