@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="apple-touch-icon" href="icon.png">
-    <title>Venmo</title>
+    <title>Image Viewer</title>
     <style>
-        /* CSS Styling */
         * {
             margin: 0;
             padding: 0;
@@ -16,47 +15,146 @@
 
         body, html {
             height: 100%;
-            overflow: hidden;
+            overflow: hidden; /* Lock horizontal scrolling */
         }
 
         .outer-container {
             height: 100vh;
-            overflow-y: scroll;          /* Allow vertical scrolling */
-            -webkit-overflow-scrolling: touch; /* Enables momentum scrolling on iOS */
+            overflow: hidden; /* Prevent horizontal scrolling */
+            position: relative;
+        }
+
+        .banner {
+            width: 100%;
+            height: 60px;
+            background-image: url('banner.jpg'); /* Using banner.jpg as the banner image */
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.5s ease;
         }
 
         .image-container {
             display: flex;
             justify-content: center;
-            background-color: white;
+            align-items: flex-start;
             height: 100vh;
             width: 100vw;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+            position: relative;
+        }
+
+        #initialImage {
+            width: 100vw;
+            height: calc(100vh - 15px); /* Adjust height to add space above the iPhone bottom bar */
+            object-fit: cover; /* Ensure the image scales to fill */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 4; /* Position below the banner and above any background */
+            display: none; /* Hidden until a user uploads an image */
+            padding-bottom: 15px; /* Add padding to prevent iPhone bottom bar overlap */
+        }
+
+        .new-image-wrapper {
+            position: absolute;
+            top: 0;
+            width: 100vw;
+            transition: transform 0.5s ease;
+            z-index: 5; /* Ensure it overlays the initial image */
+            display: flex;
+            flex-direction: column;
+            background-color: white; /* White background to cover initial image */
+            padding-top: 60px; /* Adds white space under the banner for the new image only */
+            overflow-y: auto; /* Enable vertical scrolling */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
         }
 
         #displayImage {
-            max-width: 100vw;             /* Constrain to viewport width */
-            max-height: 100vh;            /* Constrain to viewport height */
-            object-fit: contain;          /* Maintain aspect ratio within these bounds */
-            display: none;                /* Hidden until an image is loaded */
+            width: 100vw; /* Ensure the new image fills the screen horizontally */
+            height: auto; /* Adjust height to maintain aspect ratio */
+            display: none; /* Hidden until upload */
+            margin-bottom: 15px; /* Add a small white space at the bottom for slight scrolling */
         }
 
-        /* Creates the extra scrollable space */
-        .spacer {
-            height: 40px; /* Adjust this height as needed to enable scrolling */
+        .toggle-button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Style for image upload inputs to keep them below the banner */
+        .image-inputs {
+            position: relative;
+            z-index: 11; /* Ensure above images */
+            margin-top: 80px; /* Push below the banner */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #imageInput, #initialImageInput {
+            display: block;
         }
     </style>
 </head>
 <body>
+    <!-- Banner with hidden toggle button -->
+    <div class="banner" id="banner">
+        <button class="toggle-button" onclick="toggleImage()"></button>
+    </div>
+    
     <div class="outer-container">
-        <div class="image-container">
-            <input type="file" id="imageInput" accept="image/*" style="margin-top: 20px;">
-            <img id="displayImage" alt="Selected Image">
+        <div class="image-container" id="imageContainer">
+            <img id="initialImage" alt="Initial Image"> <!-- Initially hidden until user uploads a default image -->
+            
+            <!-- Wrapper for the new image with a white background for additional padding -->
+            <div class="new-image-wrapper" id="newImageWrapper">
+                <img id="displayImage" alt="Uploaded Image">
+            </div>
+            
+            <!-- File inputs for initial and new images, positioned below the banner -->
+            <div class="image-inputs">
+                <input type="file" id="initialImageInput" accept="image/*" title="Upload Default Image">
+                <input type="file" id="imageInput" accept="image/*" title="Upload New Image">
+            </div>
         </div>
-        <div class="spacer"></div> <!-- Extra space at the bottom for scrolling -->
     </div>
 
     <script>
-        // JavaScript for handling image upload
+        // Function to toggle the display of the new image and banner
+        function toggleImage() {
+            const newImageWrapper = document.getElementById("newImageWrapper");
+            const banner = document.getElementById("banner");
+            const imageContainer = document.getElementById("imageContainer");
+            const initialImage = document.getElementById("initialImage");
+
+            if (newImageWrapper.style.transform === "translateX(100vw)") {
+                newImageWrapper.style.transform = "translateX(0)";
+                banner.style.transform = "translateX(0)";
+                imageContainer.style.overflowY = "auto"; // Enable vertical scrolling for the new image only
+                initialImage.style.display = "none"; // Hide the initial image
+            } else {
+                newImageWrapper.style.transform = "translateX(100vw)";
+                banner.style.transform = "translateX(100vw)";
+                imageContainer.style.overflowY = "hidden"; // Disable vertical scrolling for the initial image
+                initialImage.style.display = "block"; // Show the initial image without extra white space
+            }
+        }
+
+        // JavaScript for handling new image upload
         document.getElementById("imageInput").addEventListener("change", function(event) {
             const file = event.target.files[0];
             if (file) {
@@ -64,10 +162,29 @@
                 reader.onload = function(e) {
                     const img = document.getElementById("displayImage");
                     img.src = e.target.result;
-                    img.style.display = "block"; // Show image once loaded
+                    img.style.display = "block"; // Show the new uploaded image
 
-                    // Hide the image input button
+                    // Hide the image input and show the banner
                     document.getElementById("imageInput").style.display = "none";
+                    document.getElementById("banner").style.display = "flex"; // Show banner
+                    document.getElementById("imageContainer").style.overflowY = "auto"; // Enable scrolling for new image only
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // JavaScript for handling initial image upload
+        document.getElementById("initialImageInput").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.getElementById("initialImage");
+                    img.src = e.target.result;
+                    img.style.display = "block"; // Show the uploaded initial image
+
+                    // Hide the initial image input button
+                    document.getElementById("initialImageInput").style.display = "none";
                 };
                 reader.readAsDataURL(file);
             }
