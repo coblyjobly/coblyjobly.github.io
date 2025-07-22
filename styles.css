@@ -465,9 +465,6 @@ footer {
     color: rgba(255, 255, 255, 0.8);
 }
 
-
-/* Existing CSS code... */
-
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     body {
